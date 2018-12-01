@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: C:\Users\1\Desktop\somp3\PenisWallet.dll-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A6AE9348-3D46-47D4-BD17-14924080C0A1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>PenisWallet</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <ApplicationVersion>0.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Cryptography\ECDSA\Base58.cs" />
+    <Compile Include="Cryptography\ECDSA\Callback.cs" />
+    <Compile Include="Cryptography\ECDSA\Hex.cs" />
+    <Compile Include="Cryptography\ECDSA\Ripemd160Manager.cs" />
+    <Compile Include="Cryptography\ECDSA\Secp256K1Manager.cs" />
+    <Compile Include="Cryptography\ECDSA\Sha256Manager.cs" />
+    <Compile Include="Cryptography\ECDSA\Internal\Sha256\Hash.cs" />
+    <Compile Include="Cryptography\ECDSA\Internal\Sha256\HmacSha256T.cs" />
+    <Compile Include="Cryptography\ECDSA\Internal\Sha256\Rfc6979HmacSha256T.cs" />
+    <Compile Include="Cryptography\ECDSA\Internal\Sha256\Sha256T.cs" />
+    <Compile Include="Cryptography\ECDSA\Internal\Secp256K1\Const.cs" />
+    <Compile Include="Cryptography\ECDSA\Internal\Secp256K1\Context.cs" />
+    <Compile Include="Cryptography\ECDSA\Internal\Secp256K1\ContextStruct.cs" />
+    <Compile Include="Cryptography\ECDSA\Internal\Secp256K1\ECKey.cs" />
+    <Compile Include="Cryptography\ECDSA\Internal\Secp256K1\EcMult.cs" />
+    <Compile Include="Cryptography\ECDSA\Internal\Secp256K1\EcMultGen.cs" />
+    <Compile Include="Cryptography\ECDSA\Internal\Secp256K1\EcmultGenContext.cs" />
+    <Compile Include="Cryptography\ECDSA\Internal\Secp256K1\EcdsaRecoverableSignature.cs" />
+    <Compile Include="Cryptography\ECDSA\Internal\Secp256K1\EcMultContext.cs" />
+    <Compile Include="Cryptography\ECDSA\Internal\Secp256K1\Fe.cs" />
+    <Compile Include="Cryptography\ECDSA\Internal\Secp256K1\FeStorage.cs" />
+    <Compile Include="Cryptography\ECDSA\Internal\Secp256K1\Field.cs" />
+    <Compile Include="Cryptography\ECDSA\Internal\Secp256K1\Ge.cs" />
+    <Compile Include="Cryptography\ECDSA\Internal\Secp256K1\GeJ.cs" />
+    <Compile Include="Cryptography\ECDSA\Internal\Secp256K1\GeStorage.cs" />
+    <Compile Include="Cryptography\ECDSA\Internal\Secp256K1\Group.cs" />
+    <Compile Include="Cryptography\ECDSA\Internal\Secp256K1\NonceFunction.cs" />
+    <Compile Include="Cryptography\ECDSA\Internal\Secp256K1\Options.cs" />
+    <Compile Include="Cryptography\ECDSA\Internal\Secp256K1\PubKey.cs" />
+    <Compile Include="Cryptography\ECDSA\Internal\Secp256K1\Scalar.cs" />
+    <Compile Include="Cryptography\ECDSA\Internal\Secp256K1\Secp256K1T.cs" />
+    <Compile Include="Cryptography\ECDSA\Internal\Secp256K1\Util.cs" />
+    <Compile Include="PenisWallet\Wallet.cs" />
+    <Compile Include="PenisWallet\PassPhraseGen.cs" />
+    <Compile Include="PenisWallet\GZipUtil.cs" />
+    <Compile Include="PenisWallet\JSONNodeType.cs" />
+    <Compile Include="PenisWallet\JSONTextMode.cs" />
+    <Compile Include="PenisWallet\JSONNode.cs" />
+    <Compile Include="PenisWallet\JSONArray.cs" />
+    <Compile Include="PenisWallet\JSONObject.cs" />
+    <Compile Include="PenisWallet\JSONString.cs" />
+    <Compile Include="PenisWallet\JSONNumber.cs" />
+    <Compile Include="PenisWallet\JSONBool.cs" />
+    <Compile Include="PenisWallet\JSONNull.cs" />
+    <Compile Include="PenisWallet\JSONLazyCreator.cs" />
+    <Compile Include="PenisWallet\JSON.cs" />
+    <Compile Include="PenisWallet\SoMPKeyProvider.cs" />
+    <Compile Include="PenisWallet\IKeyProvider.cs" />
+    <Compile Include="PenisWallet\AbstractKeyProvider.cs" />
+    <Compile Include="PenisWallet\IDataFetcher.cs" />
+    <Compile Include="PenisWallet\BtcComDataFetcher.cs" />
+    <Compile Include="PenisWallet\TimeMeasurer.cs" />
+    <Compile Include="PenisWallet\MockDataFetcher.cs" />
+    <Compile Include="PenisWallet\WalletCategorizer.cs" />
+    <Compile Include="PenisWallet\Filter`1.cs" />
+    <Compile Include="PenisWallet\PhraseProvider.cs" />
+    <Compile Include="PenisWallet\EmailPhraseProvider.cs" />
+    <Compile Include="PenisWallet\RandomPhraseProvider.cs" />
+    <Compile Include="PenisWallet\BloomWalletCategorizer.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
